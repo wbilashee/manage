@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap");
+
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -23,27 +24,32 @@ a:hover {
   text-decoration: none;
 }
 
+// Flexbox
 .flex {
   display: flex;
-}
-.flex-jc-sb {
-  justify-content: space-between;
-}
-.flex-jc-c {
-  justify-content: center;
-}
-.flex-ai-c {
-  align-items: center;
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
 }
 
-@media (max-width: 63.9375em) {
-  .hide-for-mobile {
+// Visibility
+.hide-for-mobile {
+  @include breakpoint-down(medium) {
     display: none;
   }
 }
 
-@media (min-width: 64em) {
-  .hide-for-desktop {
+.hide-for-desktop {
+  @include breakpoint-up(large) {
     display: none;
   }
-}/*# sourceMappingURL=style.css.map */
+}
