@@ -21,7 +21,26 @@ body {
 a,
 a:visited,
 a:hover {
+  font-weight: 500;
   text-decoration: none;
+}
+
+// Spacing
+.container {
+  max-width: 69.375rem;
+  margin: 0 auto;
+
+  &--pall {
+    padding-top: 4.375rem;
+    padding-right: 1.5rem;
+    padding-bottom: 4.375rem;
+    padding-left: 1.5rem;
+
+    @include breakpoint-up(large) {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
 }
 
 // Flexbox
@@ -38,6 +57,39 @@ a:hover {
 
   &-ai-c {
     align-items: center;
+  }
+}
+
+// Buttons
+button,
+.button {
+  position: relative;
+  display: inline-block;
+  padding: 0.85rem 1.85rem;
+  background: $brightRed;
+  font-weight: 500;
+  border: 0;
+  border-radius: 50px;
+  cursor: pointer;
+  color: white;
+  font-size: 0.75rem;
+  transition: opacity 300ms ease-in-out;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.25);
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+  }
+
+  &:hover::before {
+    opacity: 1;
   }
 }
 

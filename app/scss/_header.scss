@@ -1,0 +1,109 @@
+.header {
+  position: relative;
+  z-index: 1;
+
+  // Hamburger Open Styles
+  &.open {
+    .header__toggle {
+      > span:first-child {
+        transform: rotate(45deg);
+      }
+
+      > span:nth-child(2) {
+        opacity: 0;
+      }
+
+      > span:last-child {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  .overlay {
+    opacity: 0;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+  }
+
+  nav {
+    position: relative;
+    padding-top: 2.15rem;
+    padding-bottom: 2.15rem;
+
+    @include breakpoint-up(large) {
+      padding-top: 3.25rem;
+      padding-bottom: 3.25rem;
+    }
+  }
+
+  &__logo {
+    height: 1.375rem;
+    margin-top: 0.5rem;
+
+    img {
+      width: 6.5625rem;
+
+      @include breakpoint-up(large) {
+        width: 8.615rem;
+      }
+    }
+  }
+
+  &__toggle {
+    > span {
+      display: block;
+      width: 24px;
+      height: 4px;
+      background-color: $darkBlue;
+      transition: all 300ms ease-in-out;
+      transform-origin: 2px 2px;
+
+      &:not(:last-child) {
+        margin-bottom: 3px;
+      }
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    width: calc(100% - 3rem);
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 1.625rem;
+    border-radius: 5px;
+
+    a {
+      display: block;
+      padding: 0.625rem;
+      color: $darkBlue;
+      text-align: center;
+      font-size: 0.9375rem;
+    }
+  }
+
+  &__links {
+    a {
+      position: relative;
+      font-size: 0.8125rem;
+      color: $darkBlue;
+      transition: color 300ms ease-in-out;
+
+      &:not(:last-child) {
+        margin-right: 32px;
+      }
+
+      &:hover {
+        color: $darkGrayishBlue;
+      }
+    }
+  }
+
+  .button {
+    box-shadow: 0px 0.375rem 0.9375rem #f25f3a9c;
+  }
+}
