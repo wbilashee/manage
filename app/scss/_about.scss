@@ -1,0 +1,74 @@
+.about {
+  grid-template-columns: 1fr;
+
+  @include breakpoint-up(large) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__intro {
+    text-align: center;
+    padding: 0 2.5rem 0 1rem;
+
+    @include breakpoint-up(large) {
+      padding: 0;
+      text-align: left;
+    }
+
+    h2 {
+      width: auto;
+
+      @include breakpoint-up(large) {
+        width: 80%;
+      }
+    }
+
+    p {
+      width: auto;
+      margin: 1rem 0 2rem;
+
+      @include breakpoint-up(large) {
+        width: 60%;
+        margin: 1.5rem 0 0;
+      }
+    }
+  }
+
+  &__features {
+    .feature {
+      h4 {
+        margin-top: 0.5rem;
+        font-size: 0.9375rem;
+        background: #fff0ec;
+        letter-spacing: -0.5px;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+
+        @include breakpoint-up(large) {
+          background: none;
+        }
+
+        span {
+          margin-right: 1rem;
+          font-size: 0.9375rem;
+          padding: 0.55rem 1.45rem;
+
+          @include breakpoint-up(large) {
+            margin-right: 1.75rem;
+          }
+        }
+      }
+
+      p {
+        width: auto;
+        font-size: 0.845rem;
+        margin: 0.75rem 0 1.75rem;
+
+        @include breakpoint-up(large) {
+          width: 75%;
+          font-size: 0.9375rem;
+          margin: 0.75rem 0 1.75rem 5.75rem;
+        }
+      }
+    }
+  }
+}

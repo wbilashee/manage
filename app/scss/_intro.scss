@@ -31,9 +31,7 @@
 
     p {
       width: auto;
-      line-height: 1.75;
       font-size: 0.9375rem;
-      color: $darkGrayishBlue;
       margin: 0.75rem 0 1.5rem;
 
       @include breakpoint-up(large) {

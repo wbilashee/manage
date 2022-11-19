@@ -92,6 +92,29 @@ h4 {
   color: hsl(228deg, 39%, 23%);
 }
 
+h2 {
+  line-height: 1.5;
+  font-size: 1.85rem;
+  letter-spacing: -1px;
+}
+@media (min-width: 64em) {
+  h2 {
+    font-size: 2.25rem;
+  }
+}
+
+p {
+  line-height: 2;
+  font-size: 0.85rem;
+  color: hsl(227deg, 12%, 61%);
+}
+@media (min-width: 64em) {
+  p {
+    line-height: 1.75;
+    font-size: 0.9375rem;
+  }
+}
+
 a,
 a:visited,
 a:hover {
@@ -106,12 +129,24 @@ a:hover {
 .container--pall {
   padding-right: 1.5rem;
   padding-left: 1.5rem;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  padding-top: 2.75rem;
+  padding-bottom: 2.75rem;
+}
+@media (min-width: 64em) {
+  .container--pall {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
 }
 .container--py {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  padding-top: 2.75rem;
+  padding-bottom: 2.75rem;
+}
+@media (min-width: 64em) {
+  .container--py {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
 }
 .container--pl {
   padding-left: 1.5rem;
@@ -305,9 +340,7 @@ button:hover::before,
 }
 .intro__text p {
   width: auto;
-  line-height: 1.75;
   font-size: 0.9375rem;
-  color: hsl(227deg, 12%, 61%);
   margin: 0.75rem 0 1.5rem;
 }
 @media (min-width: 64em) {
@@ -318,4 +351,76 @@ button:hover::before,
 }
 .intro__image img {
   width: 100%;
+}
+
+.about {
+  grid-template-columns: 1fr;
+}
+@media (min-width: 64em) {
+  .about {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.about__intro {
+  text-align: center;
+  padding: 0 2.5rem 0 1rem;
+}
+@media (min-width: 64em) {
+  .about__intro {
+    padding: 0;
+    text-align: left;
+  }
+}
+.about__intro h2 {
+  width: auto;
+}
+@media (min-width: 64em) {
+  .about__intro h2 {
+    width: 80%;
+  }
+}
+.about__intro p {
+  width: auto;
+  margin: 1rem 0 2rem;
+}
+@media (min-width: 64em) {
+  .about__intro p {
+    width: 60%;
+    margin: 1.5rem 0 0;
+  }
+}
+.about__features .feature h4 {
+  margin-top: 0.5rem;
+  font-size: 0.9375rem;
+  background: #fff0ec;
+  letter-spacing: -0.5px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+@media (min-width: 64em) {
+  .about__features .feature h4 {
+    background: none;
+  }
+}
+.about__features .feature h4 span {
+  margin-right: 1rem;
+  font-size: 0.9375rem;
+  padding: 0.55rem 1.45rem;
+}
+@media (min-width: 64em) {
+  .about__features .feature h4 span {
+    margin-right: 1.75rem;
+  }
+}
+.about__features .feature p {
+  width: auto;
+  font-size: 0.845rem;
+  margin: 0.75rem 0 1.75rem;
+}
+@media (min-width: 64em) {
+  .about__features .feature p {
+    width: 75%;
+    font-size: 0.9375rem;
+    margin: 0.75rem 0 1.75rem 5.75rem;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -51,6 +51,27 @@ h4 {
   color: $darkBlue;
 }
 
+h2 {
+  line-height: 1.5;
+  font-size: 1.85rem;
+  letter-spacing: -1px;
+
+  @include breakpoint-up(large) {
+    font-size: 2.25rem;
+  }
+}
+
+p {
+  line-height: 2;
+  font-size: 0.85rem;
+  color: $darkGrayishBlue;
+
+  @include breakpoint-up(large) {
+    line-height: 1.75;
+    font-size: 0.9375rem;
+  }
+}
+
 a,
 a:visited,
 a:hover {
@@ -66,13 +87,23 @@ a:hover {
   &--pall {
     padding-right: 1.5rem;
     padding-left: 1.5rem;
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+    padding-top: 2.75rem;
+    padding-bottom: 2.75rem;
+
+    @include breakpoint-up(large) {
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
+    }
   }
 
   &--py {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+    padding-top: 2.75rem;
+    padding-bottom: 2.75rem;
+
+    @include breakpoint-up(large) {
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
+    }
   }
 
   &--pl {
