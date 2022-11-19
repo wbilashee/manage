@@ -1,0 +1,51 @@
+.intro {
+  padding-top: 0;
+  padding-right: 1.5rem;
+  grid-template-columns: 1fr;
+
+  @include breakpoint-up(large) {
+    padding-right: 0;
+    padding-top: 2.5rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__text {
+    order: 1;
+    text-align: center;
+
+    @include breakpoint-up(large) {
+      order: -1;
+      text-align: left;
+    }
+
+    h1 {
+      width: auto;
+      font-size: 2.35rem;
+      letter-spacing: -2px;
+
+      @include breakpoint-up(large) {
+        width: 75%;
+        font-size: 3.15rem;
+      }
+    }
+
+    p {
+      width: auto;
+      line-height: 1.75;
+      font-size: 0.9375rem;
+      color: $darkGrayishBlue;
+      margin: 0.75rem 0 1.5rem;
+
+      @include breakpoint-up(large) {
+        width: 60%;
+        margin: 2rem 0 2.5rem;
+      }
+    }
+  }
+
+  &__image {
+    img {
+      width: 100%;
+    }
+  }
+}
