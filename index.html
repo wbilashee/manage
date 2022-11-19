@@ -10,6 +10,20 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./dist/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+      integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Manage landing page</title>
   </head>
   <body>
@@ -97,28 +111,72 @@
         </div>
       </div>
     </section>
+    <section class="reviews container--pb">
+      <h2>What they’ve said</h2>
+      <div class="reviews__container">
+        <div class="owl-carousel owl-theme">
+          <div class="item review">
+            <img
+              class="review__img"
+              src="./images/avatar-anisha.png"
+              alt="anisha"
+            />
+            <div class="review__info">
+              <h4>Anisha Li</h4>
+              <p>
+                “Manage has supercharged our team’s workflow. The ability to
+                maintain visibility on larger milestones at all times keeps
+                everyone motivated.”
+              </p>
+            </div>
+          </div>
+          <div class="item review">
+            <img class="review__img" src="./images/avatar-ali.png" alt="ali" />
+            <div class="review__info">
+              <h4>Ali Bravo</h4>
+              <p>
+                “We have been able to cancel so many other subscriptions since
+                using Manage. There is no more cross-channel confusion and
+                everyone is much more focused.”
+              </p>
+            </div>
+          </div>
+          <div class="item review">
+            <img
+              class="review__img"
+              src="./images/avatar-richard.png"
+              alt="Richard"
+            />
+            <div class="review__info">
+              <h4>Richard Watts</h4>
+              <p>
+                “Manage allows us to provide structure and process. It keeps us
+                organized and focused. I can’t stop recommending them to
+                everyone I talk to!”
+              </p>
+            </div>
+          </div>
+          <div class="item review">
+            <img
+              class="review__img"
+              src="./images/avatar-shanai.png"
+              alt="Shanai"
+            />
+            <div class="review__info">
+              <h4>Shanai Gough</h4>
+              <p>
+                “Their software allows us to track, manage and collaborate on
+                our projects from anywhere. It keeps the whole team in-sync
+                without being intrusive.”
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="button button--shadow">Get Started</a>
+    </section>
+
     <!--
-  What they’ve said
-
-  Anisha Li
-  “Manage has supercharged our team’s workflow. The ability to maintain 
-  visibility on larger milestones at all times keeps everyone motivated.”
-
-  Ali Bravo
-  “We have been able to cancel so many other subscriptions since using 
-  Manage. There is no more cross-channel confusion and everyone is much 
-  more focused.”
-
-  Richard Watts
-  “Manage allows us to provide structure and process. It keeps us organized 
-  and focused. I can’t stop recommending them to everyone I talk to!”
-
-  Shanai Gough
-  “Their software allows us to track, manage and collaborate on our projects 
-  from anywhere. It keeps the whole team in-sync without being intrusive.”
-
-  Get Started
-
   Simplify how your team works today.
   Get Started
 
@@ -142,5 +200,50 @@
   </div>
   -->
     <script src="./app/js/app.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        nav: false,
+        margin: 35,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        responsiveClass: true,
+        responsive: {
+          0: {
+            items: 1,
+            dots: true,
+            stagePadding: 20,
+          },
+          600: {
+            items: 1,
+            stagePadding: 120,
+          },
+          800: {
+            items: 1,
+            dots: false,
+            loop: true,
+            stagePadding: 220,
+          },
+          1200: {
+            items: 1,
+            dots: false,
+            loop: true,
+            stagePadding: 420,
+          },
+        },
+      });
+    </script>
   </body>
 </html>

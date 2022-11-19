@@ -1,0 +1,62 @@
+.reviews {
+  padding-top: 0;
+  overflow: hidden;
+  text-align: center;
+
+  @include breakpoint-up(large) {
+    padding-top: 3.25rem;
+  }
+
+  &__container {
+    padding: 4rem 0 2rem;
+
+    .owl-dot {
+      span {
+        background: white !important;
+        border: 1px solid $brightRed !important;
+      }
+
+      &.active {
+        span {
+          background: $brightRed !important;
+        }
+      }
+    }
+
+    .review {
+      height: 18.25rem !important;
+
+      @include breakpoint-up(large) {
+        height: 16.5rem !important;
+      }
+
+      &__img {
+        margin: auto;
+        width: 4.5rem !important;
+        margin-bottom: -1.875rem;
+      }
+
+      &__info {
+        background: #fafafa;
+        padding: 2rem 1.5rem 2.5rem;
+
+        @include breakpoint-up(large) {
+          padding: 2rem 2.5rem;
+        }
+
+        h4 {
+          margin: 1.25rem 0;
+          font-size: 0.9375rem;
+
+          @include breakpoint-up(large) {
+            margin: 1rem 0;
+          }
+        }
+
+        p {
+          line-height: 2;
+        }
+      }
+    }
+  }
+}

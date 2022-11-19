@@ -148,6 +148,22 @@ a:hover {
     padding-bottom: 2.5rem;
   }
 }
+.container--pt {
+  padding-top: 2.75rem;
+}
+@media (min-width: 64em) {
+  .container--pt {
+    padding-top: 2.5rem;
+  }
+}
+.container--pb {
+  padding-bottom: 2.75rem;
+}
+@media (min-width: 64em) {
+  .container--pb {
+    padding-bottom: 2.5rem;
+  }
+}
 .container--pl {
   padding-left: 1.5rem;
 }
@@ -423,4 +439,59 @@ button:hover::before,
     font-size: 0.9375rem;
     margin: 0.75rem 0 1.75rem 5.75rem;
   }
+}
+
+.reviews {
+  padding-top: 0;
+  overflow: hidden;
+  text-align: center;
+}
+@media (min-width: 64em) {
+  .reviews {
+    padding-top: 3.25rem;
+  }
+}
+.reviews__container {
+  padding: 4rem 0 2rem;
+}
+.reviews__container .owl-dot span {
+  background: white !important;
+  border: 1px solid hsl(12deg, 88%, 59%) !important;
+}
+.reviews__container .owl-dot.active span {
+  background: hsl(12deg, 88%, 59%) !important;
+}
+.reviews__container .review {
+  height: 18.25rem !important;
+}
+@media (min-width: 64em) {
+  .reviews__container .review {
+    height: 16.5rem !important;
+  }
+}
+.reviews__container .review__img {
+  margin: auto;
+  width: 4.5rem !important;
+  margin-bottom: -1.875rem;
+}
+.reviews__container .review__info {
+  background: #fafafa;
+  padding: 2rem 1.5rem 2.5rem;
+}
+@media (min-width: 64em) {
+  .reviews__container .review__info {
+    padding: 2rem 2.5rem;
+  }
+}
+.reviews__container .review__info h4 {
+  margin: 1.25rem 0;
+  font-size: 0.9375rem;
+}
+@media (min-width: 64em) {
+  .reviews__container .review__info h4 {
+    margin: 1rem 0;
+  }
+}
+.reviews__container .review__info p {
+  line-height: 2;
 }/*# sourceMappingURL=style.css.map */

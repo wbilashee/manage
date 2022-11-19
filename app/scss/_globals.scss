@@ -106,6 +106,22 @@ a:hover {
     }
   }
 
+  &--pt {
+    padding-top: 2.75rem;
+
+    @include breakpoint-up(large) {
+      padding-top: 2.5rem;
+    }
+  }
+
+  &--pb {
+    padding-bottom: 2.75rem;
+
+    @include breakpoint-up(large) {
+      padding-bottom: 2.5rem;
+    }
+  }
+
   &--pl {
     padding-left: 1.5rem;
   }
