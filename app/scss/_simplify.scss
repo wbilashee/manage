@@ -12,7 +12,6 @@
 
   .container {
     height: 25rem;
-    padding: 0 2rem;
     text-align: center;
     flex-direction: column;
     justify-content: center;
@@ -20,7 +19,6 @@
     @include breakpoint-up(large) {
       height: 13rem;
       text-align: left;
-      padding: 0 3.35rem;
       flex-direction: row;
       justify-content: space-between;
     }
