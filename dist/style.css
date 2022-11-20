@@ -547,24 +547,19 @@ button:hover::before,
 }
 
 .footer {
-  padding-bottom: 2rem;
+  padding-bottom: 2.5rem;
   background: hsl(233deg, 12%, 13%);
 }
-@media (min-width: 64em) {
-  .footer {
-    padding-bottom: 0;
-  }
-}
-.footer .container {
+.footer__container {
   place-items: center;
   padding-top: 3.5rem;
   padding-bottom: 2rem;
   grid-template-columns: 1fr;
 }
 @media (min-width: 64em) {
-  .footer .container {
+  .footer__container {
     place-items: inherit;
-    padding-bottom: 3.75rem;
+    padding-bottom: 3rem;
     grid-template-columns: 1fr 2fr 1fr;
   }
 }
@@ -719,5 +714,18 @@ button:hover::before,
   justify-self: end;
   font-size: 0.75rem;
   text-align: center;
+}
+.footer .copy.hide-for-desktop {
+  margin-bottom: 1rem;
+}
+.footer .copy.hide-for-mobile {
   margin-bottom: -0.25rem;
+}
+.footer .attribution {
+  color: white;
+  font-size: 0.8rem;
+  text-align: center;
+}
+.footer .attribution a {
+  color: inherit;
 }/*# sourceMappingURL=style.css.map */

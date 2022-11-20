@@ -1,12 +1,8 @@
 .footer {
-  padding-bottom: 2rem;
+  padding-bottom: 2.5rem;
   background: $veryDarkBlue;
 
-  @include breakpoint-up(large) {
-    padding-bottom: 0;
-  }
-
-  .container {
+  &__container {
     place-items: center;
     padding-top: 3.5rem;
     padding-bottom: 2rem;
@@ -14,7 +10,7 @@
 
     @include breakpoint-up(large) {
       place-items: inherit;
-      padding-bottom: 3.75rem;
+      padding-bottom: 3rem;
       grid-template-columns: 1fr 2fr 1fr;
     }
   }
@@ -174,6 +170,23 @@
     justify-self: end;
     font-size: 0.75rem;
     text-align: center;
-    margin-bottom: -0.25rem;
+
+    &.hide-for-desktop {
+      margin-bottom: 1rem;
+    }
+
+    &.hide-for-mobile {
+      margin-bottom: -0.25rem;
+    }
+  }
+
+  .attribution {
+    color: white;
+    font-size: 0.8rem;
+    text-align: center;
+
+    a {
+      color: inherit;
+    }
   }
 }
