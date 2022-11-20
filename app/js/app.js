@@ -17,3 +17,29 @@ toggleBtn.addEventListener("click", () => {
         });
     }
 });
+
+const links = document.querySelectorAll("a[href='#']");
+links.forEach(link => link.addEventListener("click", (e) => {
+    e.preventDefault();
+}));
+
+const form = document.querySelector(".footer__form");
+const email = document.querySelector("#email");
+const error = document.querySelector(".error");
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const value = email.value;
+    error.style.visibility = "hidden"
+
+    if (value === "") {
+        error.style.visibility = "visible";
+        return;
+    }
+
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value) === false) {
+        error.style.visibility = "visible";
+    } else {
+        email.value = "";
+    }
+});

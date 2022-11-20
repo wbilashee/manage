@@ -575,11 +575,19 @@ button:hover::before,
 }
 .footer__logo {
   order: 1;
-  width: 9rem;
+  height: 1.75rem;
 }
 @media (min-width: 64em) {
   .footer__logo {
     order: 0;
+    height: 1.5rem;
+  }
+}
+.footer__logo img {
+  width: 9rem;
+}
+@media (min-width: 64em) {
+  .footer__logo img {
     width: 8.615rem;
   }
 }
@@ -708,6 +716,13 @@ button:hover::before,
     width: auto;
     margin-left: 0.5rem;
   }
+}
+.footer__form .error {
+  color: hsl(12deg, 88%, 59%);
+  font-size: 0.75rem;
+  font-style: italic;
+  visibility: hidden;
+  margin-left: 0.5rem;
 }
 .footer .copy {
   align-self: end;

@@ -27,11 +27,19 @@
 
   &__logo {
     order: 1;
-    width: 9rem;
+    height: 1.75rem;
 
     @include breakpoint-up(large) {
       order: 0;
-      width: 8.615rem;
+      height: 1.5rem;
+    }
+
+    img {
+      width: 9rem;
+
+      @include breakpoint-up(large) {
+        width: 8.615rem;
+      }
     }
   }
 
@@ -162,6 +170,14 @@
         width: auto;
         margin-left: 0.5rem;
       }
+    }
+
+    .error {
+      color: $brightRed;
+      font-size: 0.75rem;
+      font-style: italic;
+      visibility: hidden;
+      margin-left: 0.5rem;
     }
   }
 

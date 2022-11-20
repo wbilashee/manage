@@ -184,7 +184,9 @@
     <footer class="footer">
       <div class="footer__container container container--px grid">
         <div class="footer__icons grid">
-          <img class="footer__logo" src="./images/logo-white.svg" alt="logo" />
+          <a href="#" class="footer__logo">
+            <img src="./images/logo-white.svg" alt="logo" />
+          </a>
           <div class="footer__social flex flex-ai-c">
             <a href="#">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
@@ -242,15 +244,17 @@
           </div>
         </div>
         <div class="footer__form__container">
-          <div class="footer__form">
+          <form class="footer__form">
             <input
               type="email"
               name="email"
               id="email"
+              autocomplete="off"
               placeholder="Updates in your inbox…"
             />
             <button type="submit">Go</button>
-          </div>
+            <span class="error">Please insert a valid email</span>
+          </form>
           <p class="copy hide-for-mobile">
             Copyright 2020. All Rights Reserved
           </p>
