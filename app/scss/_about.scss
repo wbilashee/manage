@@ -1,8 +1,39 @@
 .about {
-  grid-template-columns: 1fr;
+  position: relative;
 
-  @include breakpoint-up(large) {
-    grid-template-columns: 1fr 1fr;
+  &::before {
+    content: "";
+    position: absolute;
+    background: url("../images/bg-tablet-pattern.svg") no-repeat;
+    background-position: top right -10.5rem;
+    background-size: 90%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    margin-top: -19.5rem;
+
+    @media screen and (min-width: 560px) {
+      margin-top: -24.5rem;
+    }
+
+    @include breakpoint-up(medium) {
+      background-size: 55%;
+      margin-top: -22.5rem;
+    }
+
+    @include breakpoint-up(large) {
+      background-size: 50rem 50rem;
+      background-position: bottom -15rem left -32.75rem;
+      margin-top: 15rem;
+    }
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+
+    @include breakpoint-up(large) {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   &__intro {
