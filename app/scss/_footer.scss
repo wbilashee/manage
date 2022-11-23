@@ -89,7 +89,7 @@
       column-gap: 3.5rem;
 
       @include breakpoint-up(medium) {
-        width: 50%;
+        width: 30%;
       }
 
       @include breakpoint-up(large) {
@@ -119,26 +119,27 @@
   &__form {
     width: 100%;
     margin: auto;
-    justify-self: center;
+    position: relative;
 
     @include breakpoint-up(medium) {
-      width: 60%;
+      width: 40%;
     }
 
     @include breakpoint-up(large) {
       width: auto;
-      justify-self: end;
     }
 
     &__container {
       order: 1;
       width: 100%;
       display: flex;
+      justify-content: center;
 
       @include breakpoint-up(large) {
         order: 0;
         width: auto;
         display: grid;
+        justify-content: flex-end;
       }
     }
 
@@ -174,6 +175,9 @@
 
     .error {
       color: $brightRed;
+      position: absolute;
+      left: 0;
+      bottom: -1.25rem;
       font-size: 0.75rem;
       font-style: italic;
       visibility: hidden;

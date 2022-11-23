@@ -667,7 +667,7 @@ button:hover::before,
 }
 @media (min-width: 40em) {
   .footer__links__container {
-    width: 50%;
+    width: 30%;
   }
 }
 @media (min-width: 64em) {
@@ -693,29 +693,30 @@ button:hover::before,
 .footer__form {
   width: 100%;
   margin: auto;
-  justify-self: center;
+  position: relative;
 }
 @media (min-width: 40em) {
   .footer__form {
-    width: 60%;
+    width: 40%;
   }
 }
 @media (min-width: 64em) {
   .footer__form {
     width: auto;
-    justify-self: end;
   }
 }
 .footer__form__container {
   order: 1;
   width: 100%;
   display: flex;
+  justify-content: center;
 }
 @media (min-width: 64em) {
   .footer__form__container {
     order: 0;
     width: auto;
     display: grid;
+    justify-content: flex-end;
   }
 }
 .footer__form input[type=email] {
@@ -751,6 +752,9 @@ button:hover::before,
 }
 .footer__form .error {
   color: hsl(12deg, 88%, 59%);
+  position: absolute;
+  left: 0;
+  bottom: -1.25rem;
   font-size: 0.75rem;
   font-style: italic;
   visibility: hidden;
